@@ -16,7 +16,7 @@ provider "azurerm" {
 # -----------------------------
 resource "azurerm_resource_group" "rg" {
   name     = "iac-webapp-958ao_group"
-  location = "Australia Southeast"
+  location = "Australia East"
 }
 
 # -----------------------------
@@ -29,8 +29,8 @@ resource "azurerm_app_service_plan" "app_plan" {
   kind                = "Linux"
 
   sku {
-    tier = "Free"
-    size = "F1"
+    tier = "Basic"
+    size = "B1"
   }
   reserved = true
 }
@@ -39,7 +39,7 @@ resource "azurerm_app_service_plan" "app_plan" {
 # App Service (Web App)
 # -----------------------------
 resource "azurerm_app_service" "webapp" {
-  name                = "iac-webapp-958au2"
+  name                = "iac-webapp-958RM"
   location            = azurerm_resource_group.rg.location
   resource_group_name = azurerm_resource_group.rg.name
   app_service_plan_id = azurerm_app_service_plan.app_plan.id
