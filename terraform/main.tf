@@ -23,7 +23,7 @@ resource "azurerm_resource_group" "rg" {
 # App Service Plan
 # -----------------------------
 resource "azurerm_app_service_plan" "app_plan" {
-  name                = "ASP-iacwebapp958aogroup-b82a"
+  name                = "iac-service-plan"
   location            = azurerm_resource_group.rg.location
   resource_group_name = azurerm_resource_group.rg.name
   kind                = "Linux"
@@ -32,6 +32,7 @@ resource "azurerm_app_service_plan" "app_plan" {
     tier = "Basic"
     size = "B1"
   }
+
   reserved = true
 }
 
