@@ -41,4 +41,4 @@ jobs:
         with:
           app-name: iac-webapp-958RM
           publish-profile: ${{ secrets.AZURE_WEBAPP_PUBLISH_PROFILE }}
-          package: ./site
+          package: ./deploy
