@@ -1,11 +1,11 @@
 {
   "version": 4,
   "terraform_version": "1.14.7",
-  "serial": 10,
+  "serial": 6,
   "lineage": "169cc3d0-a531-f3a2-37cb-f57a2672805c",
   "outputs": {
     "webapp_url": {
-      "value": null,
+      "value": "https://iac-webapp-958ao-ajhde7hnfkfegtf2.australiasoutheast-01.azurewebsites.net",
       "type": "string"
     }
   },
@@ -20,21 +20,21 @@
           "schema_version": 1,
           "attributes": {
             "app_service_environment_id": "",
-            "id": "/subscriptions/40fb8581-28e7-4ea9-aefb-31ff22777a94/resourceGroups/iac-webapp-958ao_group/providers/Microsoft.Web/serverFarms/iac-service-plan",
+            "id": "/subscriptions/40fb8581-28e7-4ea9-aefb-31ff22777a94/resourceGroups/iac-webapp-958ao_group/providers/Microsoft.Web/serverFarms/ASP-iacwebapp958aogroup-b82a",
             "is_xenon": false,
             "kind": "linux",
-            "location": "australiaeast",
+            "location": "australiasoutheast",
             "maximum_elastic_worker_count": 1,
-            "maximum_number_of_workers": 3,
-            "name": "iac-service-plan",
+            "maximum_number_of_workers": 1,
+            "name": "ASP-iacwebapp958aogroup-b82a",
             "per_site_scaling": false,
             "reserved": true,
             "resource_group_name": "iac-webapp-958ao_group",
             "sku": [
               {
                 "capacity": 1,
-                "size": "B1",
-                "tier": "Basic"
+                "size": "F1",
+                "tier": "Free"
               }
             ],
             "tags": {},
@@ -60,7 +60,7 @@
           "schema_version": 0,
           "attributes": {
             "id": "/subscriptions/40fb8581-28e7-4ea9-aefb-31ff22777a94/resourceGroups/iac-webapp-958ao_group",
-            "location": "australiaeast",
+            "location": "australiasoutheast",
             "managed_by": "",
             "name": "iac-webapp-958ao_group",
             "tags": {},
