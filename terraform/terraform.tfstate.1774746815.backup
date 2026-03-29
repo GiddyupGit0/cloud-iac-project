@@ -1,0 +1,81 @@
+{
+  "version": 4,
+  "terraform_version": "1.14.7",
+  "serial": 10,
+  "lineage": "169cc3d0-a531-f3a2-37cb-f57a2672805c",
+  "outputs": {
+    "webapp_url": {
+      "value": null,
+      "type": "string"
+    }
+  },
+  "resources": [
+    {
+      "mode": "managed",
+      "type": "azurerm_app_service_plan",
+      "name": "app_plan",
+      "provider": "provider[\"registry.terraform.io/hashicorp/azurerm\"]",
+      "instances": [
+        {
+          "schema_version": 1,
+          "attributes": {
+            "app_service_environment_id": "",
+            "id": "/subscriptions/40fb8581-28e7-4ea9-aefb-31ff22777a94/resourceGroups/iac-webapp-958ao_group/providers/Microsoft.Web/serverFarms/iac-service-plan",
+            "is_xenon": false,
+            "kind": "linux",
+            "location": "australiaeast",
+            "maximum_elastic_worker_count": 1,
+            "maximum_number_of_workers": 3,
+            "name": "iac-service-plan",
+            "per_site_scaling": false,
+            "reserved": true,
+            "resource_group_name": "iac-webapp-958ao_group",
+            "sku": [
+              {
+                "capacity": 1,
+                "size": "B1",
+                "tier": "Basic"
+              }
+            ],
+            "tags": {},
+            "timeouts": null,
+            "zone_redundant": false
+          },
+          "sensitive_attributes": [],
+          "identity_schema_version": 0,
+          "private": "eyJlMmJmYjczMC1lY2FhLTExZTYtOGY4OC0zNDM2M2JjN2M0YzAiOnsiY3JlYXRlIjozNjAwMDAwMDAwMDAwLCJkZWxldGUiOjM2MDAwMDAwMDAwMDAsInJlYWQiOjMwMDAwMDAwMDAwMCwidXBkYXRlIjozNjAwMDAwMDAwMDAwfSwic2NoZW1hX3ZlcnNpb24iOiIxIn0=",
+          "dependencies": [
+            "azurerm_resource_group.rg"
+          ]
+        }
+      ]
+    },
+    {
+      "mode": "managed",
+      "type": "azurerm_resource_group",
+      "name": "rg",
+      "provider": "provider[\"registry.terraform.io/hashicorp/azurerm\"]",
+      "instances": [
+        {
+          "schema_version": 0,
+          "attributes": {
+            "id": "/subscriptions/40fb8581-28e7-4ea9-aefb-31ff22777a94/resourceGroups/iac-webapp-958ao_group",
+            "location": "australiaeast",
+            "managed_by": "",
+            "name": "iac-webapp-958ao_group",
+            "tags": {},
+            "timeouts": null
+          },
+          "sensitive_attributes": [],
+          "identity_schema_version": 0,
+          "identity": {
+            "name": "iac-webapp-958ao_group",
+            "subscription_id": "40fb8581-28e7-4ea9-aefb-31ff22777a94"
+          },
+          "private": "eyJlMmJmYjczMC1lY2FhLTExZTYtOGY4OC0zNDM2M2JjN2M0YzAiOnsiY3JlYXRlIjo1NDAwMDAwMDAwMDAwLCJkZWxldGUiOjU0MDAwMDAwMDAwMDAsInJlYWQiOjMwMDAwMDAwMDAwMCwidXBkYXRlIjo1NDAwMDAwMDAwMDAwfSwic2NoZW1hX3ZlcnNpb24iOiIwIn0="
+        }
+      ]
+    }
+  ],
+  "check_results": null
+}
